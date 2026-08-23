@@ -1,0 +1,250 @@
+# 아키로그 콘텐츠 이관 및 발행 관리표
+# status: published | draft | planned | source-needed | excluded
+# priority: P0 | P1 | P2
+
+series:
+  - id: channel-developer
+    title: 채널 개발자 이야기
+    description: 앱과 웹, 인증과 서버의 경계에서 일하며 달라진 역할을 기록합니다.
+  - id: webview
+    title: WebView 서비스
+    description: 하이브리드 앱에서 앱·웹·서버의 역할과 연결 기준을 기록합니다.
+  - id: web-platform
+    title: 웹플랫폼 전환
+    description: 레거시 업무를 반복 가능한 웹서비스 구조로 전환하며 세운 기준을 기록합니다.
+  - id: development-collaboration
+    title: 개발환경과 협업
+    description: 금융권의 제약 안에서 생산성과 협업 기준을 만들어간 경험을 기록합니다.
+  - id: operations-ux
+    title: 운영과 고객 경험
+    description: 기술적 구조가 고객 메시지와 안정적인 운영으로 이어지는 과정을 기록합니다.
+
+articles:
+  - id: A-01
+    title: 코드 너머의 채널 개발자
+    slug: code-beyond-channel-developer
+    series: channel-developer
+    priority: P0
+    status: draft
+    featured: true
+    action: 기존 글 통합 및 재작성
+  - id: A-02
+    title: 채널 개발자는 왜 회의가 많아졌을까
+    slug: why-channel-developers-have-more-meetings
+    series: channel-developer
+    priority: P1
+    status: source-needed
+    featured: false
+    action: 기존 글 재작성
+  - id: A-03
+    title: 앱과 웹의 경계에서 일하는 개발자
+    slug: developer-between-app-and-web
+    series: channel-developer
+    priority: P1
+    status: planned
+    featured: false
+    action: 신규 작성
+  - id: A-04
+    title: 프로젝트의 마무리 단계에서 돌아본 개발자의 변화
+    slug: developer-changes-at-project-closing
+    series: channel-developer
+    priority: P1
+    status: source-needed
+    featured: false
+    action: 기존 회고 글 재작성
+
+  - id: B-01
+    title: 앱 안에서 웹서비스를 자연스럽게 제공하려면 무엇을 먼저 정해야 할까
+    slug: what-to-define-first-for-webview-service
+    series: webview
+    priority: P0
+    status: draft
+    featured: true
+    action: 기존 초안 확장
+  - id: B-02
+    title: 하이브리드 앱에서 Native Bridge 사용 기준에 대한 고민
+    slug: native-bridge-usage-guidelines
+    series: webview
+    priority: P0
+    status: draft
+    featured: true
+    action: 기존 글 재작성
+  - id: B-03
+    title: GNB는 앱 영역인가, 웹 영역인가
+    slug: is-gnb-app-or-web
+    series: webview
+    priority: P0
+    status: draft
+    featured: true
+    action: 기존 글 재작성
+  - id: B-04
+    title: 로그인 사용자는 바로 업무로, 비로그인 사용자는 설명 화면으로
+    slug: webview-flow-by-login-state
+    series: webview
+    priority: P1
+    status: draft
+    featured: false
+    action: 기존 초안 확장
+  - id: B-05
+    title: WebView 화면 이동에서 먼저 정해야 할 기준
+    slug: webview-navigation-guidelines
+    series: webview
+    priority: P1
+    status: planned
+    featured: false
+    action: 신규 작성
+  - id: B-06
+    title: WebView의 전자서명은 어디까지 믿을 수 있을까
+    slug: how-far-can-we-trust-webview-signatures
+    series: webview
+    priority: P0
+    status: draft
+    featured: true
+    action: 기존 글 재작성
+  - id: B-07
+    title: 전자서명에서 nonce와 transactionId가 필요한 이유
+    slug: nonce-and-transaction-id-for-signatures
+    series: webview
+    priority: P1
+    status: draft
+    featured: false
+    action: B-06 후속 글
+
+  - id: C-01
+    title: JSP 레거시 전환은 화면을 바꾸는 일이 아니었다
+    slug: jsp-modernization-beyond-ui
+    series: web-platform
+    priority: P0
+    status: source-needed
+    featured: true
+    action: 기존 초안 확장
+  - id: C-02
+    title: React와 Spring Boot로 화면과 API를 나눌 때의 현실적인 기준
+    slug: splitting-ui-and-api-with-react-spring
+    series: web-platform
+    priority: P0
+    status: source-needed
+    featured: false
+    action: 기존 글 재작성
+  - id: C-03
+    title: 모든 업무를 한 번에 전환하지 않기로 한 이유
+    slug: why-we-chose-gradual-modernization
+    series: web-platform
+    priority: P1
+    status: planned
+    featured: false
+    action: 신규 작성
+  - id: C-04
+    title: Swagger와 REST Docs를 같이 가져가는 이유
+    slug: why-swagger-and-rest-docs-together
+    series: web-platform
+    priority: P1
+    status: source-needed
+    featured: false
+    action: 기존 초안 재작성
+  - id: C-05
+    title: API 문서는 개발 산출물이 아니라 협업 기준이다
+    slug: api-documentation-as-collaboration-standard
+    series: web-platform
+    priority: P2
+    status: planned
+    featured: false
+    action: C-04 후속 글
+  - id: C-06
+    title: 작은 문구 수정은 왜 CMS에 대한 고민으로 이어졌을까
+    slug: small-copy-change-led-to-cms
+    series: web-platform
+    priority: P0
+    status: source-needed
+    featured: true
+    action: 기존 글 재작성
+  - id: C-07
+    title: CMS는 웹플랫폼 안에서 어디까지 책임져야 할까
+    slug: cms-responsibility-in-web-platform
+    series: web-platform
+    priority: P1
+    status: planned
+    featured: false
+    action: C-06 후속 글
+
+  - id: D-01
+    title: 금융권 개발망에서 오픈소스와 개발 생산성을 함께 고민하는 법
+    slug: open-source-productivity-in-financial-network
+    series: development-collaboration
+    priority: P0
+    status: source-needed
+    featured: true
+    action: 기존 글 재작성
+  - id: D-02
+    title: 폐쇄망에서 프로젝트 환경을 구성한다는 것
+    slug: building-project-environment-in-closed-network
+    series: development-collaboration
+    priority: P1
+    status: planned
+    featured: false
+    action: 신규 작성
+  - id: D-03
+    title: 오픈소스 하나를 사용하기 전에 함께 확인해야 했던 것
+    slug: what-to-check-before-using-open-source
+    series: development-collaboration
+    priority: P1
+    status: planned
+    featured: false
+    action: 라이선스 경험 기반 신규 작성
+  - id: D-04
+    title: 디자인 시스템은 도구가 아니라 협업 기준입니다
+    slug: design-system-as-collaboration-standard
+    series: development-collaboration
+    priority: P0
+    status: source-needed
+    featured: true
+    action: 기존 글 재작성
+  - id: D-05
+    title: Storybook은 예쁜 컴포넌트 문서가 아니라 협업 기준이다
+    slug: storybook-as-collaboration-standard
+    series: development-collaboration
+    priority: P1
+    status: source-needed
+    featured: false
+    action: 기존 초안 확장
+  - id: D-06
+    title: Figma의 변경을 개발 컴포넌트에 어떻게 반영할까
+    slug: syncing-figma-changes-to-components
+    series: development-collaboration
+    priority: P1
+    status: planned
+    featured: false
+    action: 변경 대시보드 경험 기반 신규 작성
+
+  - id: E-01
+    title: 원장 메시지는 왜 그대로 고객에게 보여주기 어려울까
+    slug: why-core-messages-need-customer-language
+    series: operations-ux
+    priority: P0
+    status: source-needed
+    featured: true
+    action: 기존 글 재작성
+  - id: E-02
+    title: 고객 메시지를 바꾸는 일은 단순한 문구 수정이 아니었다
+    slug: changing-customer-messages-beyond-copy
+    series: operations-ux
+    priority: P2
+    status: planned
+    featured: false
+    action: E-01과 통합 여부 검토
+  - id: E-03
+    title: 운영 가능한 WebView 서비스를 만들기 위해 필요한 것
+    slug: what-makes-webview-service-operable
+    series: operations-ux
+    priority: P1
+    status: planned
+    featured: false
+    action: 신규 작성
+  - id: E-04
+    title: 조회성 업무를 WebView로 제공하며 배운 것
+    slug: lessons-from-read-only-webview-services
+    series: operations-ux
+    priority: P1
+    status: planned
+    featured: false
+    action: 오픈 이후 작성
