@@ -1,0 +1,26 @@
+name: 아키로그 주제
+description: 다음 글의 소재와 핵심 질문을 기록합니다.
+title: "[주제] "
+labels: ["article-idea"]
+body:
+  - type: textarea
+    id: situation
+    attributes:
+      label: 어떤 상황에서 시작된 고민인가요?
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 핵심 질문
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: 선택한 기준과 이유
+  - type: textarea
+    id: takeaway
+    attributes:
+      label: 글을 통해 남기고 싶은 생각
+

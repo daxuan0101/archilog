@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="hero">
+  <p class="eyebrow">ARCHITECTURE × EXPERIENCE × LOG</p>
+  <h1>기술보다,<br><em>선택의 이유</em>를 기록합니다.</h1>
+  <p class="hero-copy">금융 서비스와 Web 플랫폼을 만들며 마주한 작은 고민, 결정의 기준, 그리고 그 과정에서 배운 것을 담습니다.</p>
+</section>
+
+<section class="post-section">
+  <div class="section-heading">
+    <h2>최근 기록</h2>
+    <span>{{ site.posts | size }}개의 글</span>
+  </div>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article class="post-card">
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+          {% if post.category %}<span>{{ post.category }}</span>{% endif %}
+        </div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% elsif post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 130 }}</p>{% endif %}
+        <a class="read-more" href="{{ post.url | relative_url }}">글 읽기 →</a>
+      </article>
+    {% else %}
+      <div class="empty-state">첫 번째 아키로그를 준비하고 있습니다.</div>
+    {% endfor %}
+  </div>
+</section>
+

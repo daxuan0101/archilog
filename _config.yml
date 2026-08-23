@@ -1,0 +1,29 @@
+title: 아키로그
+description: 프로젝트에서 마주한 작은 고민과 기술적 선택을 기록합니다.
+lang: ko-KR
+timezone: Asia/Seoul
+url: "https://daxuan0101.github.io"
+baseurl: "/archilog"
+author:
+  name: 김대현
+  role: Channel & Web Platform Developer
+
+markdown: kramdown
+permalink: /posts/:title/
+future: false
+show_drafts: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: 김대현
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+
