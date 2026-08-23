@@ -1,0 +1,75 @@
+name: Create Archilog Draft PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "영문 URL slug (예: webview-bridge-standard)"
+        required: true
+        type: string
+      title:
+        description: "글 제목"
+        required: true
+        type: string
+      subtitle:
+        description: "부제목"
+        required: false
+        type: string
+      category:
+        description: "카테고리"
+        required: true
+        default: "Web Platform"
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate slug
+        env:
+          SLUG: ${{ inputs.slug }}
+        run: |
+          if [[ ! "$SLUG" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
+            echo "slug는 영문 소문자, 숫자, 하이픈만 사용할 수 있습니다."
+            exit 1
+          fi
+      - name: Create article
+        env:
+          SLUG: ${{ inputs.slug }}
+          TITLE: ${{ inputs.title }}
+          SUBTITLE: ${{ inputs.subtitle }}
+          CATEGORY: ${{ inputs.category }}
+        run: |
+          DATE=$(date +%F)
+          BRANCH="draft/${DATE}-${SLUG}"
+          FILE="_posts/${DATE}-${SLUG}.md"
+          git checkout -b "$BRANCH"
+          sed \
+            -e "s/title: \"글 제목\"/title: \"${TITLE//\"/\\\"}\"/" \
+            -e "s/subtitle: \"글의 핵심 고민을 한 문장으로 정리합니다\"/subtitle: \"${SUBTITLE//\"/\\\"}\"/" \
+            -e "s/category: \"Web Platform\"/category: \"${CATEGORY//\"/\\\"}\"/" \
+            _drafts/article-template.md > "$FILE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$FILE"
+          git commit -m "draft: ${TITLE}"
+          git push origin "$BRANCH"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+          echo "FILE=$FILE" >> "$GITHUB_ENV"
+      - name: Open draft pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ inputs.title }}
+        run: |
+          gh pr create \
+            --draft \
+            --base main \
+            --head "$BRANCH" \
+            --title "[초안] $TITLE" \
+            --body "## 아키로그 초안\n\n- 파일: \`$FILE\`\n- 작성 상태: 초안\n\n체크리스트를 완료한 뒤 Ready for review로 전환하고 main에 병합합니다.\n\n- [ ] 제목과 부제목 검토\n- [ ] 공개 가능한 내용인지 확인\n- [ ] 문장 흐름 검토\n- [ ] 태그 정리\n- [ ] 대표 이미지 확인"
+
