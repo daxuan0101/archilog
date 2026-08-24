@@ -33,7 +33,7 @@ articles:
     slug: why-channel-developers-have-more-meetings
     series: channel-developer
     priority: P1
-    status: source-needed
+    status: draft
     featured: false
     action: 기존 글 재작성
   - id: A-03
@@ -49,7 +49,7 @@ articles:
     slug: developer-changes-at-project-closing
     series: channel-developer
     priority: P1
-    status: source-needed
+    status: draft
     featured: false
     action: 기존 회고 글 재작성
 
@@ -115,7 +115,7 @@ articles:
     slug: jsp-modernization-beyond-ui
     series: web-platform
     priority: P0
-    status: source-needed
+    status: draft
     featured: true
     action: 기존 초안 확장
   - id: C-02
@@ -123,7 +123,7 @@ articles:
     slug: splitting-ui-and-api-with-react-spring
     series: web-platform
     priority: P0
-    status: source-needed
+    status: draft
     featured: false
     action: 기존 글 재작성
   - id: C-03
@@ -139,7 +139,7 @@ articles:
     slug: why-swagger-and-rest-docs-together
     series: web-platform
     priority: P1
-    status: source-needed
+    status: draft
     featured: false
     action: 기존 초안 재작성
   - id: C-05
@@ -155,7 +155,7 @@ articles:
     slug: small-copy-change-led-to-cms
     series: web-platform
     priority: P0
-    status: source-needed
+    status: draft
     featured: true
     action: 기존 글 재작성
   - id: C-07
@@ -172,7 +172,7 @@ articles:
     slug: open-source-productivity-in-financial-network
     series: development-collaboration
     priority: P0
-    status: source-needed
+    status: draft
     featured: true
     action: 기존 글 재작성
   - id: D-02
@@ -196,7 +196,7 @@ articles:
     slug: design-system-as-collaboration-standard
     series: development-collaboration
     priority: P0
-    status: source-needed
+    status: draft
     featured: true
     action: 기존 글 재작성
   - id: D-05
@@ -204,7 +204,7 @@ articles:
     slug: storybook-as-collaboration-standard
     series: development-collaboration
     priority: P1
-    status: source-needed
+    status: draft
     featured: false
     action: 기존 초안 확장
   - id: D-06
@@ -221,7 +221,7 @@ articles:
     slug: why-core-messages-need-customer-language
     series: operations-ux
     priority: P0
-    status: source-needed
+    status: draft
     featured: true
     action: 기존 글 재작성
   - id: E-02
