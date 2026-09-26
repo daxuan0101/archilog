@@ -26,4 +26,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - scripts
+  - vendor
 
