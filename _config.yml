@@ -27,7 +27,4 @@ exclude:
   - Gemfile.lock
   - scripts
   - vendor
-  - docs
-  - domain
-  - content
 

@@ -40,5 +40,5 @@ bundle exec jekyll serve
 
 ## 개인 도메인
 
-`domain/README.md`에 DNS 및 GitHub Pages 연결 절차가 정리되어 있습니다. 도메인이 확정될 때까지는 `CNAME`을 생성하지 않습니다.
+DNS 및 GitHub Pages 연결 절차는 비공개 저장소 `daxuan0101/archilog-internal`의 `domain/README.md`에 정리되어 있습니다. 도메인이 확정될 때까지는 `CNAME`을 생성하지 않습니다.
 
