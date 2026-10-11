@@ -30,7 +30,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-기본 주소는 `http://localhost:4000/archilog/`입니다.
+기본 주소는 `http://localhost:4000/`입니다.
 
 ## 최초 GitHub 설정
 
@@ -40,5 +40,5 @@ bundle exec jekyll serve
 
 ## 개인 도메인
 
-DNS 및 GitHub Pages 연결 절차는 비공개 저장소 `daxuan0101/archilog-internal`의 `domain/README.md`에 정리되어 있습니다. 도메인이 확정될 때까지는 `CNAME`을 생성하지 않습니다.
+블로그는 `https://blog.archilog.dev`로 연결되어 있습니다. 도메인은 저장소 **Settings → Pages → Custom domain**에서 관리하며, GitHub Actions로 배포하므로 `CNAME` 파일은 두지 않습니다. DNS 설정 내용은 비공개 저장소 `daxuan0101/archilog-internal`의 `domain/README.md`에 정리되어 있습니다.
 
