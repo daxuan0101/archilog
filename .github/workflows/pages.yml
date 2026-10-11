@@ -5,8 +5,8 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Rebuild at 08:00 Asia/Seoul so dated posts become visible.
-    - cron: "0 23 * * *"
+    # Rebuild at 07:30 Asia/Seoul so dated posts become visible.
+    - cron: "30 22 * * *"
 
 permissions:
   contents: read
