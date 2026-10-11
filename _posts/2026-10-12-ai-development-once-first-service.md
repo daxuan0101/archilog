@@ -5,6 +5,8 @@ category: "Development & Collaboration"
 series: "아이디어 하나에서 서비스까지, AI와 함께한 1인 개발"
 tags: [AI활용, 서비스개발, 사이드프로젝트, 한번쯤, 추억연대기, 개발과정]
 featured: false
+migration_status: "new"
+date: 2026-10-12 08:00:00 +0900
 ---
 
 AI와 조금 더 친해져 보고 싶었습니다.
